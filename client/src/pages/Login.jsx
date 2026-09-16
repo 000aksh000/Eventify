@@ -39,7 +39,7 @@ const Login = () => {
       if (err.needsVerification) {
         setShowOTP(true);
         setSuccessMsg(
-          "Account pending verification. An OTP has been sent to your email.",
+          "Account pending verification. An OTP has been sent to your email."
         );
       } else {
         setError(typeof err === "string" ? err : err.message || "Login failed");

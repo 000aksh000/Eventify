@@ -7,7 +7,7 @@ Eventify is a full-stack MERN (MongoDB, Express, React, Node.js) application des
 ## ✨ Features
 
 - **🎨 Subtle Neumorphic UI**: Soft raised surfaces, inset input controls, tactile buttons, and clean off-white design palette built with Tailwind CSS.
-- **🔐 2FA Email OTP Verification**: 
+- **🔐 2FA Email OTP Verification**:
   - Mandatory Email OTP verification to activate new user accounts.
   - Mandatory 2FA OTP code validation to authorize event ticket reservations.
 - **🛡️ Role-Based Access Control (RBAC)**:
@@ -65,10 +65,12 @@ Eventify/
 ## 🚀 Quick Setup & Run Instructions
 
 ### Prerequisites
+
 - [Node.js](https://nodejs.org/) (v18+)
 - [MongoDB](https://www.mongodb.com/) (Local MongoDB Community Server or MongoDB Atlas Cloud)
 
 ### 1. Environment Configuration
+
 Create a `.env` file in the `server/` directory:
 
 ```env
@@ -84,6 +86,7 @@ EMAIL_PASS=your_16_character_app_password
 > **Note**: If `EMAIL_USER` and `EMAIL_PASS` are omitted, the backend will print all generated 2FA OTP codes directly to the server terminal console for easy local testing.
 
 ### 2. Install Dependencies
+
 Run the installation command from the project root:
 
 ```bash
@@ -91,11 +94,13 @@ npm run install:all
 ```
 
 Or install root dependencies:
+
 ```bash
 npm install
 ```
 
 ### 3. Seed Database (Optional)
+
 To populate your MongoDB database with sample events and demo users:
 
 ```bash
@@ -103,6 +108,7 @@ npm run seed --prefix server
 ```
 
 ### 4. Start Development Servers
+
 Start both backend (Port 5000) and frontend (Port 5173) simultaneously:
 
 ```bash
@@ -113,17 +119,18 @@ npm run dev
 
 ## 🔑 Demo Account Credentials
 
-| Role | Email | Password |
-| :--- | :--- | :--- |
+| Role      | Email                | Password      |
+| :-------- | :------------------- | :------------ |
 | **Admin** | `admin@eventify.com` | `password123` |
-| **User** | `user@eventify.com` | `password123` |
-| **User** | `alice@eventify.com` | `password123` |
+| **User**  | `user@eventify.com`  | `password123` |
+| **User**  | `alice@eventify.com` | `password123` |
 
 ---
 
 ## 🧪 Postman API Testing
 
 An exported Postman Collection is included at [`Eventify_Postman_Collection.json`](./Eventify_Postman_Collection.json):
+
 1. Open Postman and click **Import**.
 2. Drag and drop `Eventify_Postman_Collection.json`.
 3. Test pre-configured requests for Authentication, Event Creation, OTP Verification, and Admin Approval workflows.

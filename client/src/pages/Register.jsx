@@ -37,7 +37,7 @@ const Register = () => {
         setShowOTP(true);
         setSuccessMsg(
           data.message ||
-            "OTP sent to your email. Please verify to activate your account.",
+            "OTP sent to your email. Please verify to activate your account."
         );
       } else {
         await api.post("/auth/verify-otp", { email: formData.email, otp });

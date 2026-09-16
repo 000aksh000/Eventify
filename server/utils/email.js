@@ -18,7 +18,7 @@ const sendBookingEmail = async (userEmail, userName, eventTitle) => {
   try {
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.log(
-        `ℹ️ [Email Not Sent] EMAIL_USER/EMAIL_PASS not set in server/.env for ${userEmail}`,
+        `ℹ️ [Email Not Sent] EMAIL_USER/EMAIL_PASS not set in server/.env for ${userEmail}`
       );
       return;
     }
@@ -48,7 +48,7 @@ const sendOTPEmail = async (userEmail, otp, type) => {
   try {
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       console.log(
-        `ℹ️ Real email delivery skipped: EMAIL_USER/EMAIL_PASS not configured in server/.env.`,
+        `ℹ️ Real email delivery skipped: EMAIL_USER/EMAIL_PASS not configured in server/.env.`
       );
       console.log(`👉 Please use the Dev OTP code printed above: ${otp}`);
       return;

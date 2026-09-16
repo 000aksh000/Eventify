@@ -148,7 +148,7 @@ const events = [
 const seedDatabase = async () => {
   try {
     await mongoose.connect(
-      process.env.MONGO_URI || "mongodb://localhost:27017/eventify",
+      process.env.MONGO_URI || "mongodb://localhost:27017/eventify"
     );
     console.log("\n✅ MongoDB connection open...");
 
@@ -179,7 +179,7 @@ const seedDatabase = async () => {
 
     const createdEvents = await Event.insertMany(eventsWithAdmin);
     console.log(
-      `🎉 Created ${createdEvents.length} distinct events with Unsplash images.`,
+      `🎉 Created ${createdEvents.length} distinct events with Unsplash images.`
     );
 
     // Generate Bookings Data
@@ -223,7 +223,7 @@ const seedDatabase = async () => {
 
     await Booking.insertMany(bookingsData);
     console.log(
-      `🎫 Inserted ${bookingsData.length} randomized dummy bookings (confirmed, pending, cancelled, paid, not_paid).`,
+      `🎫 Inserted ${bookingsData.length} randomized dummy bookings (confirmed, pending, cancelled, paid, not_paid).`
     );
 
     console.log("\n🚀 Database seeded successfully!");

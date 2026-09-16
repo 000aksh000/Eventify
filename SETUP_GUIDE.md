@@ -71,22 +71,28 @@ PORT=5000
 ## Step 4: Run the Application!
 
 ### Start the Backend
+
 Open a terminal inside the `/server` folder:
+
 ```bash
 cd server
 npm run dev
 ```
+
 If you configured your `MONGO_URI` correctly, the terminal will say:
+
 > `Server running on port 5000`
 > `MongoDB Connected`
 
-
 ### Start the Frontend
+
 Open a new terminal inside the `/client` folder:
+
 ```bash
 cd client
 npm run dev
 ```
+
 It will provide a local URL (e.g., `http://localhost:5173/`). Open this in your browser.
 
 ---

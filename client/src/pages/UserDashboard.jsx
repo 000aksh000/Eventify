@@ -39,7 +39,7 @@ const UserDashboard = () => {
   const cancelBooking = async (id) => {
     if (
       window.confirm(
-        "Are you sure you want to cancel this ticket booking request?",
+        "Are you sure you want to cancel this ticket booking request?"
       )
     ) {
       try {
@@ -162,7 +162,7 @@ const UserDashboard = () => {
                               month: "short",
                               day: "numeric",
                               year: "numeric",
-                            },
+                            }
                           )}
                         </span>
                       </div>

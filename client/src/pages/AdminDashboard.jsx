@@ -126,15 +126,15 @@ const AdminDashboard = () => {
       b.paymentStatus === "paid" && b.status === "confirmed"
         ? sum + b.amount
         : sum,
-    0,
+    0
   );
   const paidClientsCount = new Set(
     bookings
       .filter((b) => b.paymentStatus === "paid" && b.status === "confirmed")
-      .map((b) => b.userId?._id),
+      .map((b) => b.userId?._id)
   ).size;
   const pendingRequestsCount = bookings.filter(
-    (b) => b.status === "pending",
+    (b) => b.status === "pending"
   ).length;
 
   return (

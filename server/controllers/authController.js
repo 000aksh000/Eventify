@@ -65,13 +65,11 @@ exports.login = async (req, res) => {
         action: "account_verification",
       });
       await sendOTPEmail(user.email, otp, "account_verification");
-      return res
-        .status(403)
-        .json({
-          message: "Account not verified",
-          needsVerification: true,
-          email: user.email,
-        });
+      return res.status(403).json({
+        message: "Account not verified",
+        needsVerification: true,
+        email: user.email,
+      });
     }
 
     const token = generateToken(user.id, user.role);
@@ -110,7 +108,7 @@ exports.verifyOTP = async (req, res) => {
     const user = await User.findOneAndUpdate(
       { email },
       { isVerified: true },
-      { new: true },
+      { new: true }
     );
     await OTP.deleteOne({ _id: validOTP._id });
 

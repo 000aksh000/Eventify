@@ -99,7 +99,7 @@ exports.confirmBooking = async (req, res) => {
     await sendBookingEmail(
       booking.userId.email,
       booking.userId.name,
-      booking.eventId.title,
+      booking.eventId.title
     );
 
     res.json({ message: "Booking confirmed successfully", booking });

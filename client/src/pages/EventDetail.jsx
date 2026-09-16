@@ -53,12 +53,12 @@ const EventDetail = () => {
         await api.post("/bookings/send-otp");
         setShowOTP(true);
         setSuccessMsg(
-          "OTP sent to your email address. Enter the code below to confirm booking.",
+          "OTP sent to your email address. Enter the code below to confirm booking."
         );
       } else {
         await api.post("/bookings", { eventId: event._id, otp });
         setSuccessMsg(
-          "Booking requested successfully! Your ticket request is pending admin approval.",
+          "Booking requested successfully! Your ticket request is pending admin approval."
         );
         setShowOTP(false);
         setEvent({ ...event, availableSeats: event.availableSeats - 1 });

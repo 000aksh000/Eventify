@@ -10,7 +10,7 @@ exports.getEvents = async (req, res) => {
 
     const events = await Event.find(filters).populate(
       "createdBy",
-      "name email",
+      "name email"
     );
     res.json(events);
   } catch (error) {
@@ -22,7 +22,7 @@ exports.getEventById = async (req, res) => {
   try {
     const event = await Event.findById(req.params.id).populate(
       "createdBy",
-      "name email",
+      "name email"
     );
     if (!event) return res.status(404).json({ message: "Event not found" });
     res.json(event);

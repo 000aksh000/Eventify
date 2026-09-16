@@ -145,7 +145,7 @@ const Home = () => {
             {events.map((event) => {
               const availablePercent = Math.max(
                 0,
-                Math.min(100, (event.availableSeats / event.totalSeats) * 100),
+                Math.min(100, (event.availableSeats / event.totalSeats) * 100)
               );
               return (
                 <article

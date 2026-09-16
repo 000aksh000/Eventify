@@ -13,7 +13,7 @@ const eventSchema = new mongoose.Schema(
     ticketPrice: { type: Number, required: true, default: 0 },
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("Event", eventSchema);
