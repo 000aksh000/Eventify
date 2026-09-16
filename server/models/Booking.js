@@ -22,10 +22,18 @@ const bookingSchema = new mongoose.Schema(
       enum: ["paid", "not_paid"],
       default: "not_paid",
     },
-    amount: { type: Number, required: true },
-    bookedAt: { type: Date, default: Date.now },
+    amount: {
+      type: Number,
+      required: true,
+    },
+    bookedAt: {
+      type: Date,
+      default: Date.now,
+    },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 module.exports = mongoose.model("Booking", bookingSchema);
